@@ -1,4 +1,5 @@
 class OrganizationsController < ApplicationController
+  skip_before_action :authenticate_user!, only: [:show]
   before_action :set_organization, only: [:edit, :update, :destroy]
 
   # GET /organizations

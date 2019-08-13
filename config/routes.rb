@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+
+  root 'organizations#show'
+  
   resources :signed_agreements, only: [:show, :create]
   resources :fee_types
   resources :agreements
@@ -8,10 +11,11 @@ Rails.application.routes.draw do
   resources :users, only: [:index]
   resources :carriers
   resources :photos, only: :destroy
+  resources :categories
+
   devise_for :users, controllers: { registrations: "users/registrations" }
+
   get 'home/index'
 
-  resources :categories
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  root 'organizations#show'
 end
