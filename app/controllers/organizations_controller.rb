@@ -11,8 +11,9 @@ class OrganizationsController < ApplicationController
   # GET /organizations/1
   # GET /organizations/1.json
   def show
-    # @organization = Organization.includes(:carriers).find(params[:id])
-    @organization = Organization.find(1)
+    @organization = Organization.includes(:carriers).find(params[:id])
+    # @organization ||= Organization.first
+    # @organization = Organization.all.first
   end
 
   # GET /organizations/new
