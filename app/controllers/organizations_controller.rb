@@ -1,5 +1,5 @@
 class OrganizationsController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:show]
+  skip_before_action :authenticate_user!, only: [:inventory]
   before_action :set_organization, only: [:edit, :update, :destroy]
 
   # GET /organizations
@@ -10,6 +10,13 @@ class OrganizationsController < ApplicationController
 
   # GET /organizations/1
   # GET /organizations/1.json
+
+
+  def inventory
+    #Doing this to show MidAtlantic Babywearing as default
+    @organization = Organization.first
+  end
+
   def show
     @organization = Organization.includes(:carriers).find(params[:id])
     # @organization ||= Organization.first

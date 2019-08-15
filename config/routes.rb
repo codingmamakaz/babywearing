@@ -1,9 +1,6 @@
 Rails.application.routes.draw do
 
-  # root 'organizations#show'
-  # root 'home#index'
-  # root 'organizations#:id'  
-  root :to => "organizations#show", :id => '1'
+  root 'organizations#inventory'
 
   resources :signed_agreements, only: [:show, :create]
   resources :fee_types
