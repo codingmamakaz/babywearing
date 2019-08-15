@@ -6,7 +6,7 @@ RSpec.describe SignedAgreement do
   let(:agreement) { agreements(:agreement) }
 
   before do
-    visit '/'
+    visit "organizations/inventory"
     sign_in user
   end
 

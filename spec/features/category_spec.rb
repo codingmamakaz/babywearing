@@ -5,7 +5,7 @@ RSpec.feature "category" do
   let(:user) { users(:user) }
 
   before :each do
-    visit "/"
+    visit "organizations/inventory"
     sign_in user
   end
 

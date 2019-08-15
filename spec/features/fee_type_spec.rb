@@ -3,7 +3,7 @@ RSpec.feature "fee_type" do
   let(:user) { users(:user) }
 
   before :each do
-    visit "/"
+    visit "organizations/inventory"
     sign_in user
 
     @fee_type = FeeType.new(name: 'Upgrade Membership', amount: '2000')

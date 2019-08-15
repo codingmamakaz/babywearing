@@ -3,7 +3,7 @@ RSpec.describe 'MembershipType', type: :feature do
   let(:user) { users(:user) }
 
   before(:each) do
-    visit "/"
+    visit "organizations/inventory"
     sign_in user
     @membership_type = MembershipType.new(
       name: 'Annual',

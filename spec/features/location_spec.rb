@@ -4,7 +4,7 @@ RSpec.feature 'create a location', type: :feature do
 
   before :each do
     Organization.create name: "Ruby For Good"
-    visit "/"
+    visit "organizations/inventory"
     sign_in user
   end
 

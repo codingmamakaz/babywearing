@@ -4,7 +4,7 @@ RSpec.feature 'create an agreement', type: :feature do
   let(:agreement) { agreements(:agreement) }
 
   before :each do
-    visit "/"
+    visit "organizations/inventory"
     sign_in user
   end
 

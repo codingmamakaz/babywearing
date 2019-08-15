@@ -3,7 +3,7 @@ RSpec.describe 'Organization' do
   let(:user) { users(:user) }
 
   before(:each) do
-    visit "/"
+    visit "organizations/inventory"
     sign_in user
 
     @organization = Organization.new(name: 'Henrys Baby Hammocks', description: 'Hammocks for the babies')

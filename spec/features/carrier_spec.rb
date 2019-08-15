@@ -11,7 +11,7 @@ RSpec.describe 'Carrier' do
   before do
     carrier.update_attributes(location_id: location.id, category_id: category.id)
 
-    visit '/'
+    visit "organizations/inventory"
     sign_in user
   end
 
