@@ -1,6 +1,6 @@
 RSpec.feature "user registration" do
   scenario "should allow user to create a user account" do
-    visit "/users"
+    visit root_path
     find_link("Sign up", match: :first).click
     fill_in "Email", with: "alicia@gmail.com"
     fill_in "Password", with: "just4now"
